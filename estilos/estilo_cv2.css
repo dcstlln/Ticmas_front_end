@@ -8,8 +8,8 @@
     --cini: rgb(255, 174, 0);
     --cedu: rgb(157, 255, 0);
     --cexp: rgb(0, 255, 157);
-    --chab: rgb(0, 89, 255);
-    --cint: rgb(140, 0, 255);
+    --chab: rgb(94, 150, 253);
+    --cint: rgb(194, 124, 252);
   }
 
   * {/*responsive web y fonts*/
@@ -308,6 +308,7 @@ footer {
     footer a.aderecha {
       float: right;
       background-color: #04AA6D;
+      text-decoration: none;
       font-weight: 600;
       color: white;
       font-size: small;
