@@ -224,30 +224,37 @@ body {
     float: left;
     color: #062200;
     text-align: colcontainer;
+    text-decoration: none;
     padding: 10px 6px;
     margin:5px;
-    text-decoration: none;
+    font-weight: 600;
     font-size: medium;
   }
   .nav a:hover#m_ini{
     background-color: var(--v2);
     color: black;
+    font-weight: 700;
   }
   .nav a:hover#m_edu{
     background-color: var(--v2);
     color: black;
+    font-weight: 700;
   }
   .nav a:hover#m_hab{
     background-color: var(--v2);
     color: black;
+    font-weight: 700;
   }
   .nav a:hover#m_exp{
     background-color: var(--v2);
     color: black;
+    font-weight: 700;
+    }
   }
   .nav a:hover#m_int{
     background-color: var(--v2);
     color: black;
+    font-weight: 700;
   }
   /* link a la derecha de la barra */
   .nav a.aderecha {
@@ -255,10 +262,12 @@ body {
     background-color: #04AA6D;
     color: white;
     font-size: medium;
+    font-weight: 600;
   }
   .nav a.aderecha:hover {
     background-color: var(--v2);
     color: darkgreen;
+    font-weight: 700;
   }
 /* ---------------------------------------------------------------------------------------divs del cuerpo del documento */
 
@@ -299,6 +308,7 @@ footer {
     footer a.aderecha {
       float: right;
       background-color: #04AA6D;
+      font-weight: 600;
       color: white;
       font-size: small;
       padding: 10px 6px;
@@ -306,6 +316,7 @@ footer {
     footer a.aderecha:hover {
       background-color: var(--v2);
       color: darkgreen;
+      font-weight: 700;
       padding: 10px 6px;
     }
 
