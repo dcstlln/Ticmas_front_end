@@ -1,0 +1,91 @@
+/** Estilo del CV */
+/* Variables varias */
+
+:root {
+    --v1: rgb(193, 253, 193);
+  }
+
+/* -----------------------------------------------------------------------------------------------elementos individuales*/
+.col-container {
+    display: table; /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
+    }
+    
+.col {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    }
+
+/* --------------------------------------------------------------------------------------------------------------Cuerpo */
+body {
+    font-weight: lighter; 
+    background-image: linear-gradient(to right, white  , var(--v1));
+    border: 0px;
+    padding: 0px;
+    margin: 5px;
+    }
+
+
+/* ----------------------------------------------------------------------------------------Barra de navegación superior */
+.div_nav_sup {
+      background-color: var(--v1);   
+      position: fixed;
+      top: 0;
+      width: 100%;
+      border: 0px;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    /* estilo de los links */
+.div_nav_sup ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--v1);
+      }
+      
+.div_nav_sup li {
+        float: left;
+      }
+      
+.div_nav_sup li a {
+        display: block;
+        color : black;
+        font-weight: lighter;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color to #111 (black) on hover */
+.div_nav_sup li a:hover {
+        background-color: rgb(206, 206, 206);
+        color : black;
+        font-weight: bold;
+      }
+
+
+
+
+.div_cabecera {
+    position:relative;
+    width:100%;
+    top: 20px;
+    text-align: center;
+    }
+
+.div_info_personal {
+    position:relative;
+    width:50%;
+    
+    text-align: justify;
+    }
+
+.div_info_personal {
+    position:relative;
+    width:50%;
+    
+    text-align: justify;
+    }
+

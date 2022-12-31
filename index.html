@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatible con edge -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link   rel="stylesheet" type="text/css" href="estilos/estilo_cv2.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,400;0,700;1,100;1,200;1,300;1,400;1,500;1,400;1,700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,400;0,700;1,100;1,200;1,300;1,400;1,500;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Proyecto final. Front end Academy - 2022. Ticmas: Currículum vitae. Daniel Castellano F.</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/fav.png"/>
+    <!-- open graph  meta-->
+    <meta property="og:title" content="Proyecto final. Front end Academy - 2022. Ticmas: Currículum vitae"/> 
+    <meta property="og:description" content="Página del proyecto final del curso 'Primeros pasos al Front End'">
+    <meta property="og:url" content=""> 
+    <meta property="og:type" content="CV"> 
+<style>
+  /* ------------------------------------------------------------------------------ajuste a celular de algunos elementos*/
+  /*ver por que no funca*/
+  @media only screen and (min-width: 600px) {
+    .nav a.derecha {
+      float: right;
+      background-color: blue;
+    }
+  }
+</style>
+
+<script>
+  function div_switch() { 
+    var x = document.getElementById("infopag")
+    if (x.style.display === "none") { 
+        x.style.display = "block"; 
+    } else { 
+        x.style.display = "none"; 
+    } 
+  }
+</script>
+
+</head>
+
+<body>
+<!--nav barra-->
+<div class="nav">
+    <a href="#inicio" id="m_ini"><span class="full-text">Inicio</span><span class="short-text">Inicio</span></a>
+    <a href="#educacion" id="m_edu"><span class="full-text">Estudios</span><span class="short-text">Edu.</span></a>
+    <a href="#experiencia" id="m_exp"><span class="full-text">Experiencia</span><span class="short-text">Exp.</span></a>
+    <a href="#habilidades" id="m_hab"><span class="full-text">Habilidades</span><span class="short-text">Hab.</span></a>
+    <a href="#intereses" id="m_int"><span class="full-text">Intereses</span><span class="short-text">Int.</span></a>
+    <a class="aderecha" href="#contacto" id="m_con"><span class="full-text">Contacto</span><span class="short-text">Contacto</span></a>
+</div>
+
+
+<br id="inicio">
+<br>
+<br>
+
+<!-- título general-->
+<div class="center" >
+    <h1>Currículum Vitae</h1>
+</div>
+<br>
+<br>
+
+<!--secc personal--> 
+<section id="sección_informacion_personal">
+<div class="center">
+    <h2 class="left2">Información personal</h2>
+    <br>
+    <div class="col-containerflex">
+        <div class="infocard" id="infoini">  
+            <h3>Daniel Castellano Francucci</h3>
+            <h4>Nacionalidad:</h4>
+            <p>Argentino.</p>
+            <h4>Lugar de nacimiento:</h4>
+            <p>Rafaela, Santa Fe.</p>
+            <h4>Fecha de nacimiento:</h4>
+            <p id="fecha_nacimiento">02/febrero/1974.</p>
+            <h4>Lugar de residencia actual:</h4>
+            <p>San Roque, Punilla, Córdoba, Argentina.</p>
+            <h4>Estado civil:</h4>
+            <p>Casado.</p>
+            <h4>Edad:</h4>
+            <p id="edad_actual">
+                <script src="scripts/edad.js"> </script>    
+            </p>
+        </div>
+        <div class="col30" id="fotopersonal">
+            <img src="imagenes/yolkdn.png" style="border-radius: 50%;" alt="CV Daniel Castellano"> 
+        </div>
+    </div>
+</div>
+</section>
+
+<br id="educacion">
+<br>
+<br>
+
+<!--secc académica--> 
+<section id="sección_informacion_académica"></section>
+<div class="center">
+    <h2 class="left2" >Formación académica</h2>
+    <br>
+    <div class="col-container">
+        <div class="infocard" id="infoedu">  
+            <h4>Estudios primarios:</h4>
+            <p>Egresado 1986. Escuela Rafael Nuñez, San Francisco, Córdoba, Argentina.</p>
+            <h4>Estudios secundarios:</h4>
+            <p>Egresado 1991. Instituto Pablo VI, San Francisco, Córdoba, Argentina.</p>
+            <h4>Estudio de grado:</h4>
+            <p >Egresado 1996. Ingeniero Químico. Fac. de Cienc. Exactas F. y N., Universidad Nacional de Córdoba.</p>
+            <h4>Posgrados:</h4>
+              <ul>
+                <li>Egresado 1998. Esp. Aplicaciones tecnológicas de la energía nuclear. Inst. Balseiro. Universidad nacional de Cuyo.</li>
+                <li>Egresado 2022. Msc. Aplicaciones de información espacial. Inst. de Altos Estudios Espaciales Mario Gulich. 
+                    Comisión Nacional Aeroespacial. Universidad Nacional de Córdoba.
+                    </li>
+              </ul>
+            <h4>Cursos y congresos:</h4>
+            <ul>
+                <li>1994. Higiene y Seguridad</li>
+                <li>1995. I SeminarioBrasileiro sobre Propiedade de Engenharia em Alimentos PROEA.</li>
+                <li>1996. Una nueva metodología para la experimentación industrial. Técnicas Taguchi de diseño robusto.</li>
+                <li>1997. Productividad con Autocad R13.</li>
+                <li>1999. Curso de Ingles nivel avanzado.</li>
+                <li>2000. I Seminario de Cromatografía de Gases con Detector de Masas.</li>
+                <li>2002. Auditores Internos de la Calidad Norma Iso 9001:2000</li>
+                <li>2003. IV Seminario Técnico de Absorción Atómica -AA- y Plasma Inductivo -ICP.</li>
+                <li>2004. Tratamiento de efluentes industriales.</li>
+                <li>2005. Experto en Tratamiento de Aguas y Contaminación de Suelos.</li>
+                <li>2006. Introducción a la Cromatografía de Gases Acoplada a Espectrometríade Masas</li>
+                <li>2007. Seminario Gases Científicos.</li>
+                <li>2008. Plant Cell Biotechnology for the Production of Biopharmacs.</li>
+                <li>2010. Técnicas Avanzadas de Electroforesis Capilar.</li>
+                <li>2010. Capacitación en Herramientas de Gestión para Cargos de Conducción.</li>
+                <li>2010. Quimiometría - Estadística para químicos analíticos.</li>
+                <li>2016. Uso de utilitarios matemáticos para la resolución de problemas de ingeniería.</li>
+                <li>2019. Geomorfometría </li>
+                <li>2020. Presentación: VIII Congreso Internacional Sobre Gestión y Tratamiento Integral del Agua.pdf - Acceso directo.</li>
+                <li>2022. 5th Brazilian Interpore Chapter Meeting.</li>
+                <li>2022. Análisis Estadístico de Datos.</li>
+                <li>2022. Formulación de proyectos para potenciar la producción PIME.</li>
+                <li>2022. Curso de Introdução à Microbiômicas: de multi-ômicas à descoberta de enzimas.</li>
+                <li>2022. Primeros pasos del desarrollo frontend. Argentina Programa 4.0.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<br id="experiencia">
+<br>
+<br>
+
+<!--secc experiencia laboral--> 
+<section id="sección_informacion_experiencia"></section>
+<div class="center">
+    <h2 class="left2" >Experiencia laboral </h2>
+    <br>
+    <div class="col-container">
+        <div class="infocard" id="infoexp"> 
+            <h4>Experiencia en empresas e instituciones:</h4> 
+            <ul>
+                <li>1997 a 1998. Barbero S.A. Jefe de laboratorio de materia prima.</li>
+                <li>1999 a 2022. Ceprocor. Ministerio de Ciencia y Tecnología de Córdoba. Científico Asociado</li>
+                <li>2009 a 2022. Fac. Ciencias Exac. Fís. y Nat. U. N. Córdoba. Profesor asociado, cátedra de Materiales de la industria química.</li>
+            </ul>
+            <h4>Emprendimientos independientes:</h4> 
+            <ul>
+                <li>2001. Biofarma S.A. Diseño y desarrollo de software de gestión de informes. V. Basic for M.S. Office</li>
+                <li>2002. Ceprocor. Desarrollo de un sistema informático para gestión de laboratorio de análisis químico. 
+                    Delphi, M.S. Office.
+                    </li>
+                <li>2016. Ceprocor. Diseño y desarrollo de un software de digitalización de espectros y patrones de respuesta. Lazarus.</li>
+                <li>2018. Ceprocor - Conae. Desarrollo de un sistema de calibración y corrección de imágenes satelitales Landsat.
+                    Python, tkinter, Gdal.
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<br id="habilidades">
+<br>
+<br>
+
+<!--secc intereses--> 
+<section id="sección_informacion_habilidades"></section>
+<div class="center">
+    <h2 class="left2" >Habilidades e idiomas </h2>
+    <br>
+    <div class="col-container">
+        <div class="infocard" id="infohab">  
+            <p>Idiomas</p>
+            <ul>
+                <li>Nativo: Español</li>
+                <li>Otros: Inglés avanzado</li>
+            </ul>
+            <br>
+            <p>Manejo de software utilitarios</p>
+            <ul>
+                <li>Autocad</li>
+                <li>Suits Office</li>
+                <li>R para estadística</li>
+                <li>GIS: Envi, QGis, Grass</li>
+                <li>Desarrollo software: Lazarus IDE, Anaconda Board, Spyder, Jupyter</li>
+            </ul>
+            <br>
+            <p>Desarrollo de software</p>
+            <ul>
+                <li>Lenguajes- nivel senior: Delphi, V. Basic, Python</li>
+                <li>Lenguajes- nivel intermedio: Java, Java Script</li>
+                <li>Lenguajes*- nivel inicial: Responsive HTML, CSS</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<br id="intereses">
+<br>
+<br>
+
+<!--secc intereses--> 
+<section id="sección_informacion_intereses"></section>
+<div class="center">
+    <h2 class="left2" >Intereses personales</h2>
+    <br>
+    <div class="col-container">
+        <div class="infocard" id="infoint">  
+            <ul>
+                <li>Programación y diseño de software.</li>
+                <li>Ciencia de los materiales.</li>
+                <li>Geomática y desarrollo urbano.</li>
+                <li>Optimización y automatización de procesos.</li>
+             </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<br id="contacto">
+<br>
+<br>
+
+<!--secc contacto--> 
+<section id="sección_informacion_contacto"></section>
+<div class="center">
+    <h2 class="left2" >Contacto</h2>
+    <br>
+    <div class="col-container">
+        <div class="infocard">  
+            <ul>
+                <li>Correo electrónico: dcstlXn@gmail.com</li>
+                <li>Correo electrónico alt: daniel.casteXXanX@uncor.edu</li>
+                <li>Teléfono: 351-X 168 XX8</li>
+             </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section id="sección_info_página" ></section>
+    <div class="info_pagina" id="infopag">
+        <br id="goinfo"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="col-container">
+            <div class="infocard"> 
+                <p>Esta página se realizó desde cero con Visual Studio Code. Utiliza CSS y javascript y web responsive  
+                    para modificar comportamiento y estilo.</p>
+                <p>Incluye web semántica (secciones e ids), y etiquetas Open Graph.</p>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <script>div_switch()</script>
+</section>
+
+    <!-- espacio para el final de página -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<section id="sección_footer"></section>
+<footer>
+    <table id="acerca_de">
+        <tr>
+            <td> <p> Página desarrollada por D. C. Francucci</p></td>
+            <td> <p> Contenido actualizado en: 25-12-2022</p></td>
+            <td> <p id="hoy_actual"> Documento actualizado en: </p></td>
+            <script src="scripts/hoy.js"></script>
+            <!-- boton despliegue info página -->
+            <td><a class="aderecha" id="m_info" onclick= "div_switch()" href="#goinfo">
+                <span class="full-text">Esta página</span>
+                <span class="short-text">+Info</span></a>
+            </td>
+        </tr>
+    </table>
+</footer>
+</section>
+
+</body>
+</html>
