@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatible con edge -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link   rel="stylesheet" type="text/css" href="estilos/estilo_cv2.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,400;0,700;1,100;1,200;1,300;1,400;1,500;1,400;1,700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,400;0,700;1,100;1,200;1,300;1,400;1,500;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Proyecto final. Front end Academy - 2022. Ticmas: Certificado de curso.</title>
+    <link rel="icon" type="image/x-icon" href="imagenes/fav.png"/>
+    <!-- open graph  meta-->
+    <meta property="og:title" content="Proyecto final. Front end Academy - 2022. Ticmas: Certificado de curso"/> 
+    <meta property="og:description" content="Página de renderizado de certificado de curso">
+    <meta property="og:url" content="https://github.com/dcstlln/Ticmas_front_end/blob/R1/certificado_ficticio.html"> 
+    <meta property="og:type" content="Certificado"> 
+
+<script>
+    function getURL() {
+        //colecta parámetros del curso enviados en get
+        const params = new URL(location.href).searchParams;
+        const py = params.get('py');
+        const pc = params.get('pc');
+        console.log(pc);
+        console.log(py);
+        document.getElementById("curso").innerHTML = pc
+        document.getElementById("año").innerHTML = py
+    }
+</script>
+
+</head>
+
+<body  class="certbody" onload="getURL()">
+
+    <h1>Certificado de curso</h1>
+    <div class="certcuerpo">
+
+        
+        <br>
+        <h2>Año de realización:</h2>
+        <p id="año"></p>
+        <br>
+        <h2>Título:</h2>
+        <p id="curso"></p>
+
+    </div>
+
+</body>
+
+</html>
