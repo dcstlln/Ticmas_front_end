@@ -34,8 +34,11 @@
     var data = new URLSearchParams();
     data.append("py", año);
     data.append("pc", contenido);
-    var url = "certificado_ficticio.html?" + data.toString();
-    location.href = url;
+    if(e.target.className==='cursos'){
+            var url = "certificado_ficticio.html?" + data.toString();
+            location.href = url;
+    };
+
     // console.log(url);
   }
 </script>
