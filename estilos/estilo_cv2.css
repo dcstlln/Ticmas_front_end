@@ -12,9 +12,10 @@
     --cint: rgb(219, 175, 255);
   }
 
-  * {/*responsive web y fonts*/
+  * {/*fonts*/
     /* font-family: 'Roboto Mono', monospace; */
     font-family: 'Roboto', sans-serif;
+    font-size: 11;
     box-sizing: borderbox;
   }
 
@@ -185,6 +186,9 @@ h3 { text-align: left}
   width: 100%;
 }
 
+.center {
+  text-align:center;
+}
 .titulo1{ 
     text-align:colcontainer;
     margin-top: 50px;
@@ -337,3 +341,41 @@ footer {
   .short-text { display: inline-block; }
   .full-text { display: none; }
   }
+
+  /* -----------------------------------------------------------------------------------------------------------cursos */
+  .cursos{
+    /* manejo de link al certificado: para implementar */
+  }
+  .cursos:hover{
+    background-color: var(--cedu);
+    color:#062200;
+    font-weight: bold;
+    /* mostrar cartel de abrir curso: por implementar */
+  }
+
+  /* ----------------------------------------------------------------------------------------------certificado ficticio */
+
+  .certbody{
+    background-color:rgb(255, 174, 0);
+    text-align:center;
+  }
+
+  .certcuerpo{
+    /* display: table-cell;
+    align : center; 
+    padding: 0% 5% 0% 5%;
+    margin: 5 px;
+    width: 80%;
+    text-align: center;
+    vertical-align: top; */
+    text-align:colcontainer;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 10px;
+    border: 15%;
+    border-color: black;
+    width: 80%;
+    height: 80%;
+    }

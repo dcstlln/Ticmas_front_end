@@ -14,16 +14,6 @@
     <meta property="og:description" content="Página del proyecto final del curso 'Primeros pasos al Front End'">
     <meta property="og:url" content="https://github.com/dcstlln/Ticmas_front_end/blob/R1/index.html"> 
     <meta property="og:type" content="CV"> 
-<style>
-  /* ------------------------------------------------------------------------------ajuste a celular de algunos elementos*/
-  /*ver por que no funca*/
-  @media only screen and (min-width: 600px) {
-    .nav a.derecha {
-      float: right;
-      background-color: blue;
-    }
-  }
-</style>
 
 <script>
   function div_switch() { 
@@ -34,11 +24,25 @@
         x.style.display = "none"; 
     } 
   }
+
+  function Get_event(e) {//abrir página del certificado y configurarla
+    // console.log(e.target.id, ' -->', e.target.innerHTML);
+    var s = e.target.innerHTML;
+    var año = s.slice(0, s.indexOf("."));
+    var contenido = s.slice(s.indexOf(".")+1, s.length-1);
+    const noSpecialChars = contenido.replace(/[^a-zA-Z0-9 ]/g, '');
+    var data = new URLSearchParams();
+    data.append("py", año);
+    data.append("pc", contenido);
+    var url = "certificado_ficticio.html?" + data.toString();
+    location.href = url;
+    // console.log(url);
+  }
 </script>
 
 </head>
 
-<body>
+<body onclick="Get_event(event)">
 <!--nav barra-->
 <div class="nav">
     <a href="#inicio" id="m_ini"><span class="full-text">Inicio</span><span class="short-text">Inicio</span></a>
@@ -117,30 +121,30 @@
               </ul>
             <h4>Cursos y congresos:</h4>
             <ul>
-                <li>1994. Higiene y Seguridad</li>
-                <li>1995. I SeminarioBrasileiro sobre Propiedade de Engenharia em Alimentos PROEA.</li>
-                <li>1996. Una nueva metodología para la experimentación industrial. Técnicas Taguchi de diseño robusto.</li>
-                <li>1997. Productividad con Autocad R13.</li>
-                <li>1999. Curso de Ingles nivel avanzado.</li>
-                <li>2000. I Seminario de Cromatografía de Gases con Detector de Masas.</li>
-                <li>2002. Auditores Internos de la Calidad Norma Iso 9001:2000</li>
-                <li>2003. IV Seminario Técnico de Absorción Atómica -AA- y Plasma Inductivo -ICP.</li>
-                <li>2004. Tratamiento de efluentes industriales.</li>
-                <li>2005. Experto en Tratamiento de Aguas y Contaminación de Suelos.</li>
-                <li>2006. Introducción a la Cromatografía de Gases Acoplada a Espectrometríade Masas</li>
-                <li>2007. Seminario Gases Científicos.</li>
-                <li>2008. Plant Cell Biotechnology for the Production of Biopharmacs.</li>
-                <li>2010. Técnicas Avanzadas de Electroforesis Capilar.</li>
-                <li>2010. Capacitación en Herramientas de Gestión para Cargos de Conducción.</li>
-                <li>2010. Quimiometría - Estadística para químicos analíticos.</li>
-                <li>2016. Uso de utilitarios matemáticos para la resolución de problemas de ingeniería.</li>
-                <li>2019. Geomorfometría </li>
-                <li>2020. Presentación: VIII Congreso Internacional Sobre Gestión y Tratamiento Integral del Agua.pdf - Acceso directo.</li>
-                <li>2022. 5th Brazilian Interpore Chapter Meeting.</li>
-                <li>2022. Análisis Estadístico de Datos.</li>
-                <li>2022. Formulación de proyectos para potenciar la producción PIME.</li>
-                <li>2022. Curso de Introdução à Microbiômicas: de multi-ômicas à descoberta de enzimas.</li>
-                <li>2022. Primeros pasos del desarrollo frontend. Argentina Programa 4.0.</li>
+                <li class="cursos">1994. Higiene y Seguridad</li>
+                <li class="cursos">1995. I SeminarioBrasileiro sobre Propiedade de Engenharia em Alimentos PROEA.</li>
+                <li class="cursos">1996. Una nueva metodología para la experimentación industrial. Técnicas Taguchi de diseño robusto.</li>
+                <li class="cursos">1997. Productividad con Autocad R13.</li>
+                <li class="cursos">1999. Curso de Ingles nivel avanzado.</li>
+                <li class="cursos">2000. I Seminario de Cromatografía de Gases con Detector de Masas.</li>
+                <li class="cursos">2002. Auditores Internos de la Calidad Norma Iso 9001:2000</li>
+                <li class="cursos">2003. IV Seminario Técnico de Absorción Atómica -AA- y Plasma Inductivo -ICP.</li>
+                <li class="cursos">2004. Tratamiento de efluentes industriales.</li>
+                <li class="cursos">2005. Experto en Tratamiento de Aguas y Contaminación de Suelos.</li>
+                <li class="cursos">2006. Introducción a la Cromatografía de Gases Acoplada a Espectrometríade Masas.</li>
+                <li class="cursos">2007. Seminario Gases Científicos.</li>
+                <li class="cursos">2008. Plant Cell Biotechnology for the Production of Biopharmacs.</li>
+                <li class="cursos">2010. Técnicas Avanzadas de Electroforesis Capilar.</li>
+                <li class="cursos">2010. Capacitación en Herramientas de Gestión para Cargos de Conducción.</li>
+                <li class="cursos">2010. Quimiometría - Estadística para químicos analíticos.</li>
+                <li class="cursos">2016. Uso de utilitarios matemáticos para la resolución de problemas de ingeniería.</li>
+                <li class="cursos">2019. Geomorfometría. </li>
+                <li class="cursos">2020. Presentación: VIII Congreso Internacional Sobre Gestión y Tratamiento Integral del Agua.</li>
+                <li class="cursos">2022. 5th Brazilian Interpore Chapter Meeting.</li>
+                <li class="cursos">2022. Análisis Estadístico de Datos.</li>
+                <li class="cursos">2022. Formulación de proyectos para potenciar la producción PIME.</li>
+                <li class="cursos">2022. Curso de Introdução à Microbiômicas: de multi-ômicas à descoberta de enzimas.</li>
+                <li class="cursos">2022. Primeros pasos del desarrollo frontend. Argentina Programa 4.0.</li>
             </ul>
         </div>
     </div>
@@ -193,8 +197,14 @@
         <div class="infocard" id="infohab">  
             <p>Idiomas</p>
             <ul>
-                <li>Nativo: Español</li>
-                <li>Otros: Inglés avanzado</li>
+                <li>Nativo: Español.</li>
+                <li>Otros: Inglés avanzado.</li>
+            </ul>
+            <p>Dialectos</p>
+            <ul>
+                <li>Español santafecino.</li>
+                <li>Español cordobés.</li>
+                <li>Español serrano, fonética de Villa Caeiro.</li>
             </ul>
             <br>
             <p>Manejo de software utilitarios</p>
@@ -266,9 +276,13 @@
         <br id="goinfo"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="col-container">
             <div class="infocard"> 
-                <p>Esta página se realizó desde cero con Visual Studio Code. Utiliza CSS y javascript y web responsive  
-                    para modificar comportamiento y estilo.</p>
+                <p>Esta página se realizó desde cero con Visual Studio Code. </p>
+                <br>
+                <p>Utiliza CSS y javascript y web responsive para modificar comportamiento y estilo.</p>
+                <br>
                 <p>Incluye web semántica (secciones e ids), y etiquetas Open Graph.</p>
+                <br><br>
+                <p>>>> Haga "click" en "Esta página" o "+Info" para volver.</p>
             </div>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
