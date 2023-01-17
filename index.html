@@ -15,37 +15,10 @@
     <meta property="og:url" content="https://github.com/dcstlln/Ticmas_front_end/blob/R1/index.html"> 
     <meta property="og:type" content="CV"> 
 
-<script>
-  function div_switch() { 
-    var x = document.getElementById("infopag")
-    if (x.style.display === "none") { 
-        x.style.display = "block"; 
-    } else { 
-        x.style.display = "none"; 
-    } 
-  }
-
-  function Get_event(e) {//abrir página del certificado y configurarla
-    // console.log(e.target.id, ' -->', e.target.innerHTML);
-    var s = e.target.innerHTML;
-    var año = s.slice(0, s.indexOf("."));
-    var contenido = s.slice(s.indexOf(".")+1, s.length-1);
-    const noSpecialChars = contenido.replace(/[^a-zA-Z0-9 ]/g, '');
-    var data = new URLSearchParams();
-    data.append("py", año);
-    data.append("pc", contenido);
-    if(e.target.className==='cursos'){
-            var url = "certificado_ficticio.html?" + data.toString();
-            location.href = url;
-    };
-
-    // console.log(url);
-  }
-</script>
-
 </head>
 
-<body onclick="Get_event(event)">
+<body >
+    <!-- onclick="Get_event(event)" -->
 <!--nav barra-->
 <div class="nav">
     <a href="#inicio" id="m_ini"><span class="full-text">Inicio</span><span class="short-text">Inicio</span></a>
@@ -123,7 +96,7 @@
                     </li>
               </ul>
             <h4>Cursos y congresos:</h4>
-            <ul>
+            <ul id="id_cursos">
                 <li class="cursos">1994. Higiene y Seguridad</li>
                 <li class="cursos">1995. I SeminarioBrasileiro sobre Propiedade de Engenharia em Alimentos PROEA.</li>
                 <li class="cursos">1996. Una nueva metodología para la experimentación industrial. Técnicas Taguchi de diseño robusto.</li>
@@ -276,7 +249,7 @@
 
 <section id="sección_info_página" >
     <div class="info_pagina" id="infopag">
-        <br id="goinfo"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br id="goinfo"><br><br><br><br><br><br>
         <div class="col-container">
             <div class="infocard"> 
                 <p>Esta página se realizó desde cero con Visual Studio Code. </p>
@@ -292,7 +265,6 @@
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
-    <script>div_switch()</script>
 </section>
 
     <!-- espacio para el final de página -->
@@ -307,14 +279,15 @@
             <td> <p id="hoy_actual"> Documento actualizado en: </p></td>
             <script src="scripts/hoy.js"></script>
             <!-- boton despliegue info página -->
-            <td><a class="aderecha" id="m_info" onclick= "div_switch()" href="#goinfo">
-                <span class="full-text">Esta página</span>
-                <span class="short-text">+Info</span></a>
+            <td><a class="aderecha" id="m_info" href="#goinfo">
+                <span id="infolarge" class="full-text">Esta página</span>
+                <span id="infoshort" class="short-text">+Info</span></a>
             </td>
         </tr>
     </table>
 </footer>
 </section>
 
+<script src="scripts/manejar_eventos.js"> </script>
 </body>
 </html>

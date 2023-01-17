@@ -16,13 +16,16 @@
     <meta property="og:type" content="Certificado"> 
 
 <script>
+
+    function ccolor() { e = document.getElementsByClassName("certcuerpo")
+        let hexColorCode = '#'+Math.floor(Math.random()*16777215).toString(16);
+        e[0].style.background = hexColorCode}
+
     function getURL() {
         //colecta parámetros del curso enviados en get
         const params = new URL(location.href).searchParams;
         const py = params.get('py');
         const pc = params.get('pc');
-        console.log(pc);
-        console.log(py);
         document.getElementById("curso").innerHTML = pc
         document.getElementById("año").innerHTML = py
     }
@@ -30,12 +33,10 @@
 
 </head>
 
-<body  class="certbody" onload="getURL()">
+<body  class="certbody" onload="getURL()" >
 
     <h1>Certificado de curso</h1>
     <div class="certcuerpo">
-
-        
         <br>
         <h2>Año de realización:</h2>
         <p id="año"></p>
@@ -46,7 +47,8 @@
     </div>
     <br>	
     <a href="javascript: history.go(-1)">Volver atrás</a>
-
+    <script>  ccolor() </script>
 </body>
+
 
 </html>
